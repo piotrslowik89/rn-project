@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -7,6 +7,8 @@ import {
   Button,
   TouchableOpacity
 } from 'react-native';
+
+import { Context } from '../context/TaskContext';
 
 const CreateScreen = () =>{
     return(

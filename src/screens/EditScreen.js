@@ -1,3 +1,4 @@
+
 import React, { useContext } from 'react';
 import {
   View,
@@ -7,10 +8,14 @@ import {
   Button,
   TouchableOpacity
 } from 'react-native';
+import { Context } from '../context/TaskContext';
 
-const EditScreen = () =>{
+import TaskForm from '../components/TaskForm';
+
+
+const CreateScreen = () =>{
     return(
-        <View><Text>EditScreen</Text></View>
+        <View><Text>IndexScreen</Text></View>
     )
 }
 
@@ -31,4 +36,4 @@ const styles = StyleSheet.create({
     }
   });
   
-  export default EditScreen;
+  export default CreateScreen;

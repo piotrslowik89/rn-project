@@ -1,5 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
-
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -18,9 +16,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen name="IndexScreen" component={IndexScreen} />
+      {/* <Stack.Screen name="IndexScreen" component={IndexScreen} />
       <Stack.Screen name="CreateScreen" component={CreateScreen} />
-      <Stack.Screen name="ShowScreen" component={ShowScreen} />
+      <Stack.Screen name="ShowScreen" component={ShowScreen} /> */}
       <Stack.Screen name="EditScreen" component={EditScreen} />
     </Stack.Navigator>
     </NavigationContainer>
