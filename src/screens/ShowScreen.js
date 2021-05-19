@@ -1,34 +1,21 @@
 import React, { useContext } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  Button,
-  TouchableOpacity
-} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import { Context } from '../context/TaskContext';
 
-const ShowScreen = () =>{
-    return(
-        <View><Text>ShowScreen</Text></View>
-    )
-}
+const ShowScreen = ({ navigation }) => {
+  const { state } = useContext(Context);
 
-const styles = StyleSheet.create({
-    row: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      paddingVertical: 20,
-      paddingHorizontal: 10,
-      borderTopWidth: 1,
-      borderColor: 'gray'
-    },
-    title: {
-      fontSize: 18
-    },
-    icon: {
-      fontSize: 24
-    }
-  });
-  
-  export default ShowScreen;
+  const taskPost = state.find(
+    taskPost => taskPost.id === navigation.getParam('id')
+  );
+
+  return (
+    <View>
+      <Text>{taskPost.title}</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({});
+
+export default ShowScreen;
